@@ -7,6 +7,7 @@ const root = dirname(fileURLToPath(import.meta.url));
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 export default {
+  mode: PRODUCTION ? 'production' : 'development',
   entry: './src/index.js',
   output: {
     path: `${root}/dist`,
