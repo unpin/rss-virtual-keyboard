@@ -14,6 +14,7 @@ export default {
     filename: 'bundle.js',
     clean: true,
   },
+  resolve: ['.js'],
   plugins: [
     new HtmlWebpackPlugin({
       favicon: './src/assets/favicon.png',
