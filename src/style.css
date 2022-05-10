@@ -1,7 +1,80 @@
-body {
-    background-color: black;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
 
-    & p {
-        color: green;
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1040px;
+}
+
+.textarea {
+    min-width: 640px;
+    margin: auto;
+}
+
+.shortcut {
+    font-size: 24px;
+    text-align: center;
+    margin: 2rem;
+    color: #333;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 960px;
+    background: #eee;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.keyboard__row {
+    display: flex;
+    margin: 0.25rem 0;
+    justify-content: space-between;
+}
+.keyboard__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: white;
+    color: #444;
+    border: 1px solid #aaa;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    &.small {
+        width: 70px;
     }
+    &.medium {
+        width: 90px;
+    }
+    &.large {
+        width: 120px;
+    }
+    &.huge {
+        width: 390px;
+    }
+    &.active {
+        background-color: #d5d3d3;
+    }
+}
+
+.keyboard__button:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.keyboard__symbol {
+    height: 50%;
+}
+.keyboard__letter {
+    text-align: center;
+    height: 50%;
 }
